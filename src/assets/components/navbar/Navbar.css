@@ -1,0 +1,14 @@
+.color-navbar{
+    background:#19191a;
+    top: 0;
+    position: sticky;
+    z-index: 10;
+}
+
+.color-icones{
+    color: #53c38d;
+}
+
+.color-pesquisar {
+    background-color: #262626;
+}

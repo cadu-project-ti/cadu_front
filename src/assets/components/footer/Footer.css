@@ -1,0 +1,9 @@
+.color-footer{
+    background:#19191a;
+    position: sticky;
+    z-index: 10;
+}
+
+.color-text{
+    color: #53c38d;
+}
