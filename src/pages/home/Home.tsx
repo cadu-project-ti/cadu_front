@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import Construcao from '../../imagens/construcao.png'
+import Construcao from '../../assets/imagens/construcao.png'
 
 function Home() {
   return (

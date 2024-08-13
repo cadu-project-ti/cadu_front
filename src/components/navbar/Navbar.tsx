@@ -1,7 +1,7 @@
 import React from "react";
-import Logo from "../../imagens/logo.png";
-import User from "../../imagens/usuario.png";
-import Carrinho from "../../imagens/carrinho.png"
+import Logo from "../../assets/imagens/logo.png";
+import User from "../../assets/imagens/usuario.png";
+import Carrinho from "../../assets/imagens/carrinho.png"
 import "./Navbar.css";
 function Navbar() {
   return (

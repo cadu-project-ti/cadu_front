@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import Usuario from '../../../models/Usuario'
-import { cadastrarUsuario } from '../../../service/Service'
+import Usuario from '../../models/Usuario'
+import { cadastrarUsuario } from '../../service/Service'
 import './Cadastro.css'
 
 function Cadastro() {

@@ -1,15 +1,15 @@
 import React from "react";
-import Home from "./assets/pages/home/Home";
-import Categorias from "./assets/pages/categorias/Categorias";
-import Sobre from "./assets/pages/sobre/Sobre";
-import Doacoes from "./assets/pages/doacoes/Doacoes";
-import Contato from "./assets/pages/contato/Contato";
-import Navbar from "./assets/components/navbar/Navbar";
-import Footer from "./assets/components/footer/Footer";
+import Home from "./pages/home/Home";
+import Categorias from "./pages/categorias/Categorias";
+import Sobre from "./pages/sobre/Sobre";
+import Doacoes from "./pages/doacoes/Doacoes";
+import Contato from "./pages/contato/Contato";
+import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Login from "./assets/pages/login/Login";
+import Login from "./pages/login/Login";
 import { AuthProvider } from "./contexts/AuthContext";
-import Cadastro from "./assets/pages/cadastro/Cadastro";
+import Cadastro from "./pages/cadastro/Cadastro";
 
 function App() {
   return (
