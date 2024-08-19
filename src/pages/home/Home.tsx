@@ -1,6 +1,14 @@
 import "./Home.css";
 import Construcao from "../../assets/imagens/construcao.png";
 import { Link } from "react-router-dom";
+import { A11y, Autoplay, Navigation, Pagination, Scrollbar } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 function Home() {
   return (
@@ -21,16 +29,115 @@ function Home() {
             </div>
           </div>
         </div>
-        
-        <div className="flex justify-center bg-gray-800 ">
-          <div className="flex flex-col gap-4 items-center justify-center py-4">
-            <h1 className="text-5xl color-texts ">Seja bem vindo ao CADU!</h1>
-            <h2 className="color-texts">Página em Construção</h2>
-            <img
-              src={Construcao}
-              alt="Imagem de site em construção"
-              className="animate-pulse"
-            />
+
+
+        <div className="color-fundo py-6">
+        <Swiper
+            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+            spaceBetween={50}
+            slidesPerView={4}
+            navigation
+            pagination={{ clickable: true }}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log("slide change")}
+            autoplay={{ delay: 4000 }} // 3000 ms = 3 segundos
+            loop={true} // Ativa o loop dos slides
+            
+          >
+            <SwiperSlide>
+              <div className="flex bg-gray-200 p-10 rounded shadow-md gap-4 items-center flex-col container mx-auto md:w-96">
+                <img
+                  src={"https://github.com/danielthx23.png"}
+                  alt=""
+                  className="w-24 h-24 rounded-full"
+                />
+                <p>Daniel Saburo Akiyama </p>
+                <p className="flex gap-2">
+                  <a
+                    href="https://www.linkedin.com/in/daniel-akiyama/"
+                    target="blank"
+                  >
+                    <FaLinkedin />
+                  </a>
+                  <a href="https://github.com/joaopguima" target="blank">
+                    <FaGithub />
+                  </a>
+                </p>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="flex bg-gray-200 p-10 rounded shadow-md gap-4 items-center flex-col container mx-auto md:w-96">
+                <img
+                  src={"https://github.com/joaopguima.png"}
+                  alt=""
+                  className="w-24 h-24 rounded-full"
+                />
+                <p>João Pedro Guimarães</p>
+                <p className="flex gap-2">
+                  <a
+                    href="https://www.linkedin.com/in/joaopguima/"
+                    target="blank"
+                  >
+                    <FaLinkedin />
+                  </a>
+                  <a href="https://github.com/joaopguima" target="blank">
+                    <FaGithub />
+                  </a>
+                </p>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="flex bg-gray-200 p-10 rounded shadow-md gap-4 items-center flex-col container mx-auto md:w-96">
+                <img
+                  src={"https://github.com/Leogb2014.png"}
+                  alt=""
+                  className="w-24 h-24 rounded-full"
+                />
+                <p>Leonardo Gobetti</p>
+                <p className="flex gap-2">
+                  <a
+                    href="https://www.linkedin.com/in/leonardo-gobetti/"
+                    target="blank"
+                  >
+                    <FaLinkedin />
+                  </a>
+                  <a href="https://github.com/Leogb2014" target="blank">
+                    <FaGithub />
+                  </a>
+                </p>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="flex bg-gray-200 p-10 rounded shadow-md gap-4 items-center flex-col container mx-auto md:w-96">
+                <img
+                  src={"https://github.com/Sara-Vasconcelos.png"}
+                  alt=""
+                  className="w-24 h-24 rounded-full"
+                />
+                <p>Sara Vasconcelos</p>
+                <p className="flex gap-2">
+                  <a
+                    href="https://www.linkedin.com/in/sara-vasconcelos-freitas-souza/"
+                    target="blank"
+                  >
+                    <FaLinkedin />
+                  </a>
+                  <a href="https://github.com/Sara-vasconcelos" target="blank">
+                    <FaGithub />
+                  </a>
+                </p>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+       
+
+        <div className="color-fundo">
+          <div>
+          teste 
           </div>
         </div>
       </div>
