@@ -1,9 +1,9 @@
 import { ChangeEvent, useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { AuthContext } from "../../contexts/AuthContext";
-import Produto from "../../models/Produto";
-import { buscar, atualizar, cadastrar } from "../../service/Service";
-import { toastAlerta } from "../../util/toastAlert";
+import { AuthContext } from "../../../contexts/AuthContext";
+import Produto from "../../../models/Produto";
+import { buscar, atualizar, cadastrar } from "../../../service/Service";
+import { toastAlerta } from "../../../util/toastAlert";
 
 function FormularioProduto() {
     const navigate = useNavigate();

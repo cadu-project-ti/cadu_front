@@ -1,4 +1,4 @@
-import Produto from '../../models/Produto'
+import Produto from '../../../models/Produto'
 
 interface CardProdutoProps {
     prod: Produto

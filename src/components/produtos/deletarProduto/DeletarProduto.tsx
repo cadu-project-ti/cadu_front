@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from "react";
-import Produto from "../../models/Produto";
+import Produto from "../../../models/Produto";
 import { useNavigate, useParams } from "react-router-dom";
-import { AuthContext } from "../../contexts/AuthContext";
-import { buscar, deletar } from "../../service/Service";
-import { toastAlerta } from "../../util/toastAlert";
+import { AuthContext } from "../../../contexts/AuthContext";
+import { buscar, deletar } from "../../../service/Service";
+import { toastAlerta } from "../../../util/toastAlert";
 
 function DeletarProduto() {
   const [produto, setProduto] = useState<Produto>({} as Produto);
