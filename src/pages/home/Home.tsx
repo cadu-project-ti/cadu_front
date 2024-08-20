@@ -1,8 +1,13 @@
 import "./Home.css";
-import Construcao from "../../assets/imagens/construcao.png";
 import { Link } from "react-router-dom";
-import { A11y, Autoplay, Navigation, Pagination, Scrollbar } from "swiper/modules";
-
+import {
+  A11y,
+  Autoplay,
+  Navigation,
+  Pagination,
+  Scrollbar,
+} from "swiper/modules";
+import Banner from "../../assets/imagens/banner.png";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -14,25 +19,23 @@ function Home() {
   return (
     <>
       <div>
-        <div className="flex justify-center fundoHome">
-          <div className="container grid grid-cols-2 items-center justify-center">
-            <div className="flex-col gap-4  py-4">
-              <div className="flex justify-around gap-6">
-                <Link
-                  to="/produtos"
-                  className="rounded-2xl bg-white text-[#19191a] text-xl hover:bg-[#53c38d] font-bold py-3 px-6"
-                  style={{ marginTop: "250px", marginRight: "250px" }}>
-                  {" "}
-                  <button>VER PRODUTOS</button>
-                </Link>
-              </div>
-            </div>
+        <div className="relative flex justify-center">
+          <img src={Banner} alt="" />
+        </div>
+
+        <div className="absolute inset-0 flex items-center mb-20">
+          <div className="flex-col gap-4">
+            <Link
+              to="/produtos"
+              className="rounded-2xl bg-white text-[#19191a] text-xl hover:bg-[#53c38d] font-bold py-3 px-6"
+              style={{ marginTop: "100px", marginLeft: "410px" }}>
+              <button>VER PRODUTOS</button>
+            </Link>
           </div>
         </div>
 
-
         <div className="color-fundo py-6">
-        <Swiper
+          <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
             spaceBetween={50}
             slidesPerView={4}
@@ -42,7 +45,6 @@ function Home() {
             onSlideChange={() => console.log("slide change")}
             autoplay={{ delay: 4000 }} // 3000 ms = 3 segundos
             loop={true} // Ativa o loop dos slides
-            
           >
             <SwiperSlide>
               <div className="flex bg-gray-200 p-10 rounded shadow-md gap-4 items-center flex-col container mx-auto md:w-96">
@@ -133,12 +135,9 @@ function Home() {
             </SwiperSlide>
           </Swiper>
         </div>
-       
 
         <div className="color-fundo">
-          <div>
-          teste 
-          </div>
+          <div>teste</div>
         </div>
       </div>
     </>
