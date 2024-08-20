@@ -1,4 +1,3 @@
-import React from "react";
 import Home from "./pages/home/Home";
 import Categorias from "./pages/categorias/Categorias";
 import Sobre from "./pages/sobre/Sobre";
@@ -20,7 +19,7 @@ function App() {
       <div className='min-h-[80vh]'>
         <Routes>
           
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login/>} />
           <Route path="/cadastro" element={<Cadastro />} />
           <Route path="/categorias" element={<Categorias />} />
