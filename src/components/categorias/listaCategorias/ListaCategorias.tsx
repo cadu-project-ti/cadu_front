@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import { buscar } from './../../../service/Service';
 import CardCategorias from '../cardCategoria/CardCategorias';
-import Categorias from '../../../models/Categorias';
+import Categorias from '../../../models/Categoria';
 
 function ListaCategorias() {
   const [categorias, setCategorias] = useState<Categorias[]>([]);

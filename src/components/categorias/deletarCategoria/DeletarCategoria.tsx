@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router'
 import { AuthContext } from '../../../contexts/AuthContext'
-import Categorias from '../../../models/Categorias';
+import Categorias from '../../../models/Categoria';
 import { buscar, deletar } from '../../../service/Service';
 
 

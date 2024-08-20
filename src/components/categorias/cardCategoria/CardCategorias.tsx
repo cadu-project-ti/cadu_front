@@ -1,4 +1,4 @@
-import Categorias from '../../../models/Categorias'
+import Categorias from '../../../models/Categoria'
 
 interface CardCategoriasProps {
   categoria: Categorias

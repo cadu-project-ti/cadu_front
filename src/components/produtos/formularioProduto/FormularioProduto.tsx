@@ -4,6 +4,7 @@ import { AuthContext } from "../../../contexts/AuthContext";
 import Produto from "../../../models/Produto";
 import { buscar, atualizar, cadastrar } from "../../../service/Service";
 import { toastAlerta } from "../../../util/toastAlert";
+import Categoria from "../../../models/Categoria";
 
 function FormularioProduto() {
     const navigate = useNavigate();
@@ -13,7 +14,7 @@ function FormularioProduto() {
     const { usuario, handleLogout } = useContext(AuthContext);
     const token = usuario.token;
   
-    const [categorias, setCategoria] = useState<Categoria[]>([]);
+    const [categorias, setCategorias] = useState<Categoria[]>([]);
   
     const [categoria, setCategoria] = useState<Categoria>({
       id: 0,
@@ -27,6 +28,7 @@ function FormularioProduto() {
         nome: '',
         preco: 0,
         quantidade: 0,
+        categoria: null,
       });
     
       async function buscarProdutoPorId(id: string) {
@@ -81,7 +83,6 @@ function FormularioProduto() {
           ...produto,
           [e.target.name]: e.target.value,
           categoria: categoria,
-          usuario: usuario,
         });
       }
     
@@ -132,7 +133,7 @@ function FormularioProduto() {
         }
       }
     
-      const carregandoCategoria = categorias.descricao === '';
+      const carregandoCategoria = categoria.descricao === '';
 
       {}
       return (

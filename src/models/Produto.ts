@@ -1,3 +1,5 @@
+import Categorias from "./Categoria";
+
 export default interface Produto {
     id: number;
     descricao: string;
@@ -5,5 +7,6 @@ export default interface Produto {
     nome: string;
     preco: number;
     quantidade: number;
-    categoria: Categoria | Null;
+    categoria: Categorias | null;
+    qtd? : number;
 }
