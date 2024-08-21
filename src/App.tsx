@@ -17,6 +17,7 @@ import ListaProdutos from "./components/produtos/listaProdutos/ListaProdutos";
 import { ToastContainer } from "react-toastify";
 import DeletarProduto from "./components/produtos/deletarProduto/DeletarProduto";
 import ListaProdutosEdit from "./components/produtos/listaProdutos/ListaProdutosEdit";
+import FormularioCategoria from "./components/categorias/formularioCategoria/FormularioCategoria";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/cadastro" element={<Cadastro />} />
                 <Route path="/categorias" element={<Categorias />} />
+                <Route path="/cadastrarCategoria" element={<FormularioCategoria />} />
                 <Route path="/sobre" element={<Sobre />} />
                 <Route path="/doacoes" element={<Doacoes />} />
                 <Route path="/contato" element={<Contato />} />

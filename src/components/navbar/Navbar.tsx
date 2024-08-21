@@ -63,7 +63,7 @@ function Navbar() {
 
   if (usuario.token !== "") {
     navBarComponent = (
-      <div>
+      <div className="font-mono">
         <div className="flex py-4 mx-auto space-x-4 color-navbar items-center justify-between border-b-emerald-500 border-b-2">
           <button type="submit" onClick={() => navigate('/home')}>
               <img
@@ -130,7 +130,7 @@ function Navbar() {
     );
   } else {
     navBarComponent = (
-      <div>
+      <div className="font-mono">
         <div className="flex py-4 mx-auto space-x-4 color-navbar items-center justify-between border-b-emerald-500 border-b-2">
           <button type="submit">
             <a href="/home">

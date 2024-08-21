@@ -13,7 +13,7 @@ import {
   Autoplay,
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import CardProdutoEdit from "../cardProduto/CardProdutoEdit";
+import Banner from "../../../assets/imagens/banner2.jpg";
 
 function ListaProdutos() {
   const [produtos, setProdutos] = useState<Produto[]>([]);
@@ -23,12 +23,12 @@ function ListaProdutos() {
   const { usuario, handleLogout } = useContext(AuthContext);
   const token = usuario.token;
 
-  useEffect(() => {
+  /*useEffect(() => {
     if (token === "") {
       toastAlerta("Você precisa estar logado", "info");
       navigate("/");
     }
-  }, [token]);
+  }, [token]);*/
 
   async function buscarProdutos() {
     try {
@@ -51,29 +51,32 @@ function ListaProdutos() {
 
   return (
     <>
-      <div>
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-          spaceBetween={-45}
-          slidesPerView={5}
-          navigation
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
-          autoplay={{ delay: 3000 }} // 3000 ms = 3 segundos
-          loop={true} // Ativa o loop dos slides
-        >
-          {produtos &&
-            produtos.map((item) => (
-          
-                <SwiperSlide className="mb-4 mt-4">
-                  <CardProduto key={item.id} prod={item} />
-                </SwiperSlide>
-            
-            ))}
-        </Swiper>
+      <div className="">
+        <div>
+          <div className="justify-center items-center">
+            <Swiper
+              modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+              spaceBetween={-45}
+              slidesPerView={5}
+              navigation
+              onSwiper={(swiper) => console.log(swiper)}
+              onSlideChange={() => console.log("slide change")}
+              autoplay={{ delay: 3000 }} // 3000 ms = 3 segundos
+              loop={true} // Ativa o loop dos slides
+            >
+              {produtos &&
+                produtos.map((item) => (
+                  <SwiperSlide className="mb-4 mt-4">
+                    <CardProduto key={item.id} prod={item} />
+                  </SwiperSlide>
+                ))}
+            </Swiper>
+          </div>
+        </div>
       </div>
     </>
   );
 }
 
 export default ListaProdutos;
+2;
