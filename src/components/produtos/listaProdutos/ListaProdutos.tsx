@@ -4,6 +4,7 @@ import { AuthContext } from "../../../contexts/AuthContext";
 import Produto from "../../../models/Produto";
 import { buscar } from "../../../service/Service";
 import { toastAlerta } from "../../../util/toastAlert";
+import CardProduto from "../cardProduto/CardProduto";
 
 function ListaProdutos() {
     const [produtos, setProdutos] = useState<Produto[]>([]);
@@ -42,7 +43,11 @@ function ListaProdutos() {
 
     return (
         <>
-          teste
+          {produtos && produtos.map((item) => (
+            <div>
+              <CardProduto key={item.id} prod={item}/>
+            </div>
+          ))}
         </>
       );
     }

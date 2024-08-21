@@ -3,11 +3,13 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Categorias from '../../../models/Categoria';
 import { atualizar, buscar, cadastrar } from './../../../service/Service';
+import { toastAlerta } from '../../../util/toastAlert';
 
 
 
 function FormularioCategoria() {
-  const [categorias, setCategorias] = useState<Categorias>({} as Categorias);
+  const [categorias, setCategorias] = useState<Categorias[]>([]);
+  const [categoria, setCategoria] = useState<Categorias>({} as Categorias);
 
   let navigate = useNavigate();
 
@@ -17,7 +19,7 @@ function FormularioCategoria() {
   const token = usuario.token;
 
   async function buscarPorId(id: string) {
-    await buscar(`/categorias/${id}`, setCategorias, {
+    await buscar(`/categorias${id}`, setCategoria, {
       headers: {
         Authorization: token,
       },
@@ -31,12 +33,12 @@ function FormularioCategoria() {
   }, [id])
 
   function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
-    setCategorias({
-      ...categorias,
+    setCategoria({
+      ...categoria,
       [e.target.name]: e.target.value
     })
 
-    console.log(JSON.stringify(categorias))
+    console.log(JSON.stringify(categoria))
   }
 
   async function gerarNovaCategoria(e: ChangeEvent<HTMLFormElement>) {
@@ -44,13 +46,13 @@ function FormularioCategoria() {
 
     if (id !== undefined) {
       try {
-        await atualizar(`/categorias`, categorias, setCategorias, {
+        await atualizar(`/categorias`, categoria, setCategoria, {
           headers: {
             'Authorization': token
           }
         })
 
-        alert('Categoria atualizado com sucesso')
+        alert('Categoria atualizada com sucesso')
         retornar()
 
       } catch (error: any) {
@@ -58,27 +60,27 @@ function FormularioCategoria() {
           alert('O token expirou, favor logar novamente')
           handleLogout()
         } else {
-          alert('Erro ao atualizar a Categoria')
+          toastAlerta('Erro ao atualizar a Categoria', 'erro')
         }
 
       }
 
     } else {
       try {
-        await cadastrar(`/categorias`, categorias, setCategorias, {
+        await cadastrar(`/categorias/cadastrar/`, categoria, setCategoria, {
           headers: {
             'Authorization': token
           }
         })
 
-        alert('Categorias cadastrado com sucesso')
+        alert('Categoria cadastrada com sucesso')
 
       } catch (error: any) {
         if (error.toString().includes('403')) {
-          alert('O token expirou, favor logar novamente')
+          toastAlerta('O token expirou, favor logar novamente', 'erro')
           handleLogout()
         } else {
-          alert('Erro ao cadastrado a Categoria')
+          toastAlerta('Erro ao cadastrar a Categoria', 'erro')
         }
       }
     }
@@ -105,13 +107,13 @@ function FormularioCategoria() {
 
       <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovaCategoria}>
         <div className="flex flex-col gap-2">
-          <label htmlFor="descricao">Descrição da Categoria</label>
+          <label htmlFor="tipo">Descrição da Categoria</label>
           <input
             type="text"
             placeholder="Descrição"
-            name='descricao'
+            name='tipo'
             className="border-2 border-grey-700 rounded p-2"
-            value={categorias.descricao}
+            value={categoria.tipo}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
           />
         </div>
@@ -127,7 +129,3 @@ function FormularioCategoria() {
 }
 
 export default FormularioCategoria;
-
-function setCategorias(arg0: any) {
-    throw new Error('Function not implemented.');
-}

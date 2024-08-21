@@ -1,10 +1,10 @@
 import { useState, useContext, useEffect } from "react";
-import Logo from "../../assets/imagens/logo.png";
-import User from "../../assets/imagens/usuario.png";
-import Carrinho from "../../assets/imagens/carrinho.png";
-import Logout from '../../assets/imagens/logout.png'
+import Logo from "../../assets/imagens/navbarImg/logo.png";
+import User from "../../assets/imagens/navbarImg/usuario.png";
+import Carrinho from "../../assets/imagens/navbarImg/carrinho.png";
+import Logout from '../../assets/imagens/navbarImg/logout.png'
 import "./Navbar.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import { toastAlerta } from "../../util/toastAlert";
 import Login from "../../pages/login/Login"; // Importa o componente Login
@@ -87,26 +87,32 @@ function Navbar() {
               <button type="submit" className="hover:text-white">
                 <li>Contato</li>
               </button>
+              <Link to="/cadastrarProduto">
+                <li>Cadastrar Produto</li>
+              </Link>
+              <Link to="/cadastrarCategoria">
+                <li>Cadastrar Categoria</li>
+              </Link>
             </ul>
           </div>
 
-          <div className="flex ">
-            <button type="submit">
+          <div className="flex gap-6">
+            <Link to={"/carrinho"}>
               <img
                 src={Carrinho}
                 alt="Carrinho"
                 className="py-4 items-center"
               />
-            </button>
+            </Link>
             <button
               onClick={logout}
               type="button"
-              className="profile-button"
+              className="px-0 pr-2"
             >
               <img
                 src={Logout}
                 alt="Meu perfil"
-                className="py-4 items-center p-10"
+                className="items-center"
               />
             </button>
           </div>
@@ -150,14 +156,14 @@ function Navbar() {
             </ul>
           </div>
 
-          <div className="flex ">
-            <button type="submit">
+          <div className="flex gap-6">
+            <Link to={"/carrinho"}>
               <img
                 src={Carrinho}
                 alt="Carrinho"
                 className="py-4 items-center"
               />
-            </button>
+            </Link>
             <button
               onClick={toggleDropdown}
               type="button"
@@ -166,7 +172,7 @@ function Navbar() {
               <img
                 src={User}
                 alt="Meu perfil"
-                className="py-4 items-center p-10"
+                className="px-0 pr-2"
               />
             </button>
           </div>
