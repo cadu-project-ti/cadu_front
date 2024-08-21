@@ -74,7 +74,7 @@ function Navbar() {
           </button>
 
           <div className="justify-center mx-4 py-4">
-            <ul className="flex space-x-24 text-center color-icones items-end text-2xl">
+            <ul className="flex space-x-24 text-center color-icones items-end text-">
               <button type="submit" onClick={() => navigate("/categorias")} className="hover:text-white">
                 <li>Categorias</li>
               </button>
@@ -89,6 +89,9 @@ function Navbar() {
               </button>
               <Link to="/cadastrarProduto">
                 <li>Cadastrar Produto</li>
+              </Link>
+              <Link to="/editarProdutos">
+                <li>Editar Produto</li>
               </Link>
               <Link to="/cadastrarCategoria">
                 <li>Cadastrar Categoria</li>

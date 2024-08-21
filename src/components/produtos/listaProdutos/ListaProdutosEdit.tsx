@@ -4,15 +4,7 @@ import { AuthContext } from "../../../contexts/AuthContext";
 import Produto from "../../../models/Produto";
 import { buscar } from "../../../service/Service";
 import { toastAlerta } from "../../../util/toastAlert";
-import CardProduto from "../cardProduto/CardProduto";
-import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  Autoplay,
-} from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Dna } from "react-loader-spinner";
 import CardProdutoEdit from "../cardProduto/CardProdutoEdit";
 
 function ListaProdutos() {
@@ -51,27 +43,23 @@ function ListaProdutos() {
 
   return (
     <>
-      <div>
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-          spaceBetween={-45}
-          slidesPerView={5}
-          navigation
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
-          autoplay={{ delay: 3000 }} // 3000 ms = 3 segundos
-          loop={true} // Ativa o loop dos slides
-        >
-          {produtos &&
-            produtos.map((item) => (
-          
-                <SwiperSlide className="mb-4 mt-4">
-                  <CardProduto key={item.id} prod={item} />
-                </SwiperSlide>
-            
-            ))}
-        </Swiper>
+      {produtos.length === 0 && (
+        <Dna
+          visible={true}
+          height="200"
+          width="200"
+          ariaLabel="dna-loading"
+          wrapperStyle={{}}
+          wrapperClass="dna-wrapper mx-auto"
+        />
+      )}
+      <div className="container mx-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {produtos.map((produto) => (
+          <CardProdutoEdit key={produto.id} prod={produto} />
+        ))}
+        
       </div>
+
     </>
   );
 }

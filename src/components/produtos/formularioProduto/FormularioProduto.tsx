@@ -18,7 +18,7 @@ function FormularioProduto() {
   
     const [categoria, setCategoria] = useState<Categoria>({
       id: 0,
-      tipo: '',
+      descricao: '',
     });
 
     const [produto, setProdutos] = useState<Produto>({
@@ -97,7 +97,7 @@ function FormularioProduto() {
     
         if (id != undefined) {
           try {
-            await atualizar(`/produtos/atualizar`, produto, setProdutos, {
+            await atualizar(`/produtos`, produto, setProdutos, {
               headers: {
                 Authorization: token,
               },
@@ -114,7 +114,7 @@ function FormularioProduto() {
           }
         } else {
           try {
-            await cadastrar(`/produtos/cadastrar`, produto, setProdutos, {
+            await cadastrar(`/produtos`, produto, setProdutos, {
               headers: {
                 Authorization: token,
               },
@@ -133,7 +133,7 @@ function FormularioProduto() {
         }
       }
     
-      const carregandoCategoria = categoria.tipo === '';
+      const carregandoCategoria = categoria.descricao === '';
 
       {}
       return (
@@ -211,7 +211,7 @@ function FormularioProduto() {
               <option value="" selected disabled>Selecione um tema</option>
               {categorias.map((categoria) => (
                 <>
-                  <option value={categoria.id} >{categoria.tipo}</option>
+                  <option value={categoria.id} >{categoria.descricao}</option>
                 </>
               ))}
             </select>

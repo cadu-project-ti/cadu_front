@@ -14,7 +14,7 @@ function CardProduto({prod}: CardProdutoProps) {
   let precoOriginal = prod.preco;
   let desconto = 0.10;
   let novoValor = precoOriginal - (precoOriginal * desconto);
-
+  
   return (
 
     <div className="flex border-white border-2 flex-col bg-white p-0 shadow-md items-center container mx-10 md:w-80 rounded-lg">
@@ -33,11 +33,14 @@ function CardProduto({prod}: CardProdutoProps) {
     
 
     </div>
-    <button onClick={() => adicionarItem(prod)} className="bg-[#19191a] border-whitetext-center rounded-sm mb-2 justify-center mt-2 hover:bg-[#53c38d]"> 
-        <div className="mr-4 ml-4 font-bold text-white">
-          COMPRAR
-        </div>
-    </button>
+    <div className="flex">
+      <Link to={`/editarPostagem/${prod.id}`} className='w-full text-white bg-indigo-400 hover:bg-indigo-800 flex items-center justify-center py-2'>
+          <button>Editar</button>
+        </Link>
+        <Link to={`/deletarPostagem/${prod.id}`} className='text-white bg-red-400 hover:bg-red-700 w-full flex items-center justify-center'>
+          <button>Deletar</button>
+        </Link>
+      </div>
   </div>
   )
 }

@@ -67,7 +67,7 @@ function FormularioCategoria() {
 
     } else {
       try {
-        await cadastrar(`/categorias/cadastrar/`, categoria, setCategoria, {
+        await cadastrar(`/categorias`, categoria, setCategoria, {
           headers: {
             'Authorization': token
           }
@@ -107,13 +107,13 @@ function FormularioCategoria() {
 
       <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovaCategoria}>
         <div className="flex flex-col gap-2">
-          <label htmlFor="tipo">Descrição da Categoria</label>
+          <label htmlFor="descricao">Descrição da Categoria</label>
           <input
             type="text"
             placeholder="Descrição"
-            name='tipo'
+            name='descricao'
             className="border-2 border-grey-700 rounded p-2"
-            value={categoria.tipo}
+            value={categoria.descricao}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
           />
         </div>

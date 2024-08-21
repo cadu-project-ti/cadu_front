@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import ProdutosSwiper from "../../components/swiper/ProdutosSwiper"; 
+import ListaProdutos from "../../components/produtos/listaProdutos/ListaProdutos";
 
 function Home() {
   return (
@@ -26,7 +27,7 @@ function Home() {
         </div>
 
         <div className="color-fundo">
-        <ProdutosSwiper />
+        <ListaProdutos />
         </div>
       </div>
     </>

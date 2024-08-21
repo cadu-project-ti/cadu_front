@@ -13,9 +13,10 @@ import Cadastro from "./pages/cadastro/Cadastro";
 import Carrinho from "./pages/carrinho/Carrinho";
 import FormularioProduto from "./components/produtos/formularioProduto/FormularioProduto";
 import { CarrinhoProvider } from "./contexts/CarrinhoContext";
-import FormularioCategoria from "./components/categorias/formularioCategoria/FormularioCategoria";
 import ListaProdutos from "./components/produtos/listaProdutos/ListaProdutos";
 import { ToastContainer } from "react-toastify";
+import DeletarProduto from "./components/produtos/deletarProduto/DeletarProduto";
+import ListaProdutosEdit from "./components/produtos/listaProdutos/ListaProdutosEdit";
 
 function App() {
   return (
@@ -37,7 +38,8 @@ function App() {
                 <Route path="/contato" element={<Contato />} />
                 <Route path="/carrinho" element={<Carrinho />} />
                 <Route path="/cadastrarProduto" element={<FormularioProduto />}/>
-                <Route path="/cadastrarCategoria" element={<FormularioCategoria />}/>
+                <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
+                <Route path="/editarProdutos" element={<ListaProdutosEdit />} />
                 <Route path="/produtos" element={<ListaProdutos />}/>
               </Routes>
             </div>
