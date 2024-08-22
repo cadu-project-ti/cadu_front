@@ -9,9 +9,9 @@ import ListaProdutos from "../../components/produtos/listaProdutos/ListaProdutos
 function Home() {
   return (
     <>
-      <div className="color-fundo">
+      <div>
         <div className="fundoHome flex items-center">
-          <div className="container text-white-">
+          <div className="container">
             <div className="flex flex-col gap-4 ml-96 mt-28">
               <div className="flex">
                 <Link
