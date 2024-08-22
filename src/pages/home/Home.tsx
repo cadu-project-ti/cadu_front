@@ -1,17 +1,36 @@
-import React from "react";
 import "./Home.css";
-import Construcao from '../../assets/imagens/construcao.png'
+import { Link } from "react-router-dom";
+import Banner from "../../assets/imagens/navbarImg/banner.png";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import ProdutosSwiper from "../../components/swiper/ProdutosSwiper"; 
+import ListaProdutos from "../../components/produtos/listaProdutos/ListaProdutos";
 
 function Home() {
   return (
-    <div className="flex justify-center bg-gray-800 min-h-[83vh]">
-      <div className="flex 1 flex-col gap-4 items-center justify-center py-4">
-        <h1 className="text-5xl color-texts ">Seja bem vindo ao CADU!</h1>
-        <h2 className="color-texts">Página em Construção</h2>
-        <img src={Construcao} alt="Imagem de site em construção" className="animate-pulse"/>
+    <>
+      <div>
+        <div className="relative flex justify-center border-b-[#53c38d] border-b-2">
+          <img src={Banner} alt="" />
+        </div>
+
+        <div className="absolute inset-0 flex items-center mb-20">
+          <div className="flex-col gap-4">
+            <Link
+              to="/produtos" className="rounded-2xl bg-white text-[#19191a] text-xl hover:bg-[#53c38d] font-bold py-3 px-6"
+              style={{ marginTop: "100px", marginLeft: "410px" }}>
+              <button>VER PRODUTOS</button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="color-fundo">
+        <ListaProdutos />
+        </div>
       </div>
-    </div>
-    
+    </>
   );
 }
 

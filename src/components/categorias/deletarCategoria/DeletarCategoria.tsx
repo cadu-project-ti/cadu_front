@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router'
 import { AuthContext } from '../../../contexts/AuthContext'
 import Categorias from '../../../models/Categorias';
+=======
+import { useContext, useEffect, useState } from 'react'
+import { useNavigate, useParams } from 'react-router'
+import { AuthContext } from '../../../contexts/AuthContext'
+import Categorias from '../../../models/Categoria';
+>>>>>>> 40059f721f59a43f661edc559aa53c7dfe1bbf39
 import { buscar, deletar } from '../../../service/Service';
 
 

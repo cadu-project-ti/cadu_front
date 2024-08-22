@@ -8,3 +8,15 @@
 .color-texts {
     color: #53c38d;
 }
+
+.fundoHome {
+    background-image: url(../../assets/imagens/banner.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    min-height: 80vh;
+    background-size: cover;
+    background-position:center;
+    background-blend-mode: darken;
+    height: min-content;
+}

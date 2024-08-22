@@ -1,10 +1,18 @@
+<<<<<<< HEAD
 import React, { useContext, useEffect, useState } from 'react';
+=======
+import { useContext, useEffect, useState } from 'react';
+>>>>>>> 40059f721f59a43f661edc559aa53c7dfe1bbf39
 import { Dna } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import { buscar } from './../../../service/Service';
 import CardCategorias from '../cardCategoria/CardCategorias';
+<<<<<<< HEAD
 import Categorias from '../../../models/Categorias';
+=======
+import Categorias from '../../../models/Categoria';
+>>>>>>> 40059f721f59a43f661edc559aa53c7dfe1bbf39
 
 function ListaCategorias() {
   const [categorias, setCategorias] = useState<Categorias[]>([]);
