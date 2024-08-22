@@ -28,7 +28,7 @@ function CardProduto({prod}: CardProdutoProps) {
       <p className="text-lg text-black font-bold">
         {prod.nome}
       </p>
-      <p className="line-through text-red-600 font-bold"> R$ {prod.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} </p>
+      <p className="line-through font-bold" style={{color:"#D43635"}}> R$ {prod.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} </p>
       <p className="text-2xl text-[#53c38d] font-bold">  {novoValor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} </p>
     
 
