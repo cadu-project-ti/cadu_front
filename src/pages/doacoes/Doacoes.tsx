@@ -27,7 +27,7 @@ const DonationForm = () => {
 
   return (
     <div className="flex justify-center items-center min-h-[70vh]"> <img src={Banner2} alt="" className="opacity-70 h-screen w-screen object-cover absolute" />
-      <div className="bg-[#1c1c22] absolute  text-white justify-center items-center text-center py-5 px-6 rounded-md">
+      <div className="absolute bg-black bg-opacity-80 text-white font-semibold justify-center items-center text-center py-5 px-6 rounded-md">
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label>Nome do Produto:</label>
@@ -36,7 +36,7 @@ const DonationForm = () => {
               value={nomeProduto}
               onChange={(e) => setNomeProduto(e.target.value)}
               required
-              className="border border-gray-300 p-2 rounded w-full text-black"
+              className="border border-gray-300 p-2 rounded w-full text-[#53c38d]"
             />
           </div>
 
@@ -47,7 +47,7 @@ const DonationForm = () => {
               value={anoDeUso}
               onChange={(e) => setAnoDeUso(e.target.value)}
               required
-              className="border border-gray-300 p-2 rounded w-full text-black"
+              className="border border-gray-300 p-2 rounded w-full text-[#53c38d]"
             />
           </div>
 
@@ -58,7 +58,7 @@ const DonationForm = () => {
               value={marca}
               onChange={(e) => setMarca(e.target.value)}
               required
-              className="border border-gray-300 p-2 rounded w-full text-black"
+              className="border border-gray-300 p-2 rounded w-full text-[#53c38d]"
             />
           </div>
 
@@ -68,7 +68,7 @@ const DonationForm = () => {
               value={condicao}
               onChange={(e) => setCondicao(e.target.value)}
               required
-              className="border border-gray-300 p-2 rounded w-full text-black"
+              className="border border-gray-300 p-2 rounded w-full text-[#53c38d]"
             >
               <option value="novo">Novo</option>
               <option value="usado">Usado</option>
@@ -78,9 +78,9 @@ const DonationForm = () => {
 
           <button
             type="submit"
-            className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
+            className="bg-[#53c38d] hover:text-[#53c38d] hover:bg-white text-white py-2 px-4 rounded">
             Enviar Doação
-          </button>
+          </button> 
         </form>
       </div>
     </div>
