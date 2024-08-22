@@ -30,8 +30,8 @@ function Home() {
         </div>
         <div className="py-4"></div>
 
-        <div className="bg-[#53c38d]  hover:text-white ml-[150px] mr-[150px] rounded-t-md text-black text-center text-2xl py-4">
-            <ul className="hover:text-white text-center px-10">Confira abaixo nossos produtos</ul>
+        <div className="bg-[#53c38d] hover:text-white ml-[150px] mr-[150px] rounded-t-md text-black text-center text-2xl py-4">
+          <ul className="hover:text-white text-center px-10">Confira abaixo nossos produtos</ul>
         </div>
         <div className="bg-white ml-[150px] mr-[150px] rounded-b-md shadow-md">
           <div>
