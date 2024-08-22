@@ -53,12 +53,15 @@ function ListaProdutos() {
     <>
       <div className="">
         <div>
-          <div className="justify-center items-center">
+          <div className="justify-center items-center swiper-container">
             <Swiper
               modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-              spaceBetween={-45}
-              slidesPerView={5}
-              navigation
+              spaceBetween={0}
+              slidesPerView={4}
+              navigation={{
+                prevEl: ".swiper-button-prev",
+                nextEl: ".swiper-button-next",
+              }}
               onSwiper={(swiper) => console.log(swiper)}
               onSlideChange={() => console.log("slide change")}
               autoplay={{ delay: 3000 }} // 3000 ms = 3 segundos
@@ -70,7 +73,11 @@ function ListaProdutos() {
                     <CardProduto key={item.id} prod={item} />
                   </SwiperSlide>
                 ))}
+                <div className="swiper-button-prev"></div>
+                <div className="swiper-button-next"></div>
             </Swiper>
+
+            
           </div>
         </div>
       </div>

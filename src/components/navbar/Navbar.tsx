@@ -9,6 +9,7 @@ import { AuthContext } from "../../contexts/AuthContext";
 import { toastAlerta } from "../../util/toastAlert";
 import Login from "../../pages/login/Login"; // Importa o componente Login
 
+
 function Navbar() {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
@@ -75,26 +76,20 @@ function Navbar() {
 
           <div className="justify-center mx-4 py-4">
             <ul className="flex space-x-24 text-center color-icones items-end text-">
-              <button type="submit" onClick={() => navigate("/categorias")} className="hover:text-white">
-                <li>Categorias</li>
-              </button>
-              <button type="submit" className="hover:text-white">
+              <Link to="/sobre">
                 <li>Sobre nós</li>
-              </button>
-              <button type="submit" className="hover:text-white">
+              </Link>
+              <Link to="/doacoes" className="hover:text-white">
                 <li>Doações</li>
-              </button>
-              <button type="submit" className="hover:text-white">
-                <li>Contato</li>
-              </button>
+              </Link>
               <Link to="/cadastrarProduto">
-                <li>Cadastrar Produto</li>
+                <li className="hover:text-white">Cadastrar Produto</li>
               </Link>
               <Link to="/editarProdutos">
-                <li>Editar Produto</li>
+                <li className="hover:text-white">Editar Produto</li>
               </Link>
               <Link to="/cadastrarCategoria">
-                <li>Cadastrar Categoria</li>
+                <li className="hover:text-white">Cadastrar Categoria</li>
               </Link>
             </ul>
           </div>
@@ -144,18 +139,12 @@ function Navbar() {
 
           <div className="justify-center mx-4 py-4">
             <ul className="flex space-x-24 text-center color-icones items-end text-2xl">
-              <button type="submit" onClick={() => navigate("/categorias")} className="hover:text-white">
-                <li>Categorias</li>
-              </button>
               <button type="submit" className="hover:text-white">
                 <li>Sobre nós</li>
               </button>
-              <button type="submit" className="hover:text-white">
+              <Link to="/doacoes" className="hover:text-white">
                 <li>Doações</li>
-              </button>
-              <button type="submit" className="hover:text-white">
-                <li>Contato</li>
-              </button>
+              </Link>
             </ul>
           </div>
 
