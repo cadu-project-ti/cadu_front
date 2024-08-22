@@ -1,0 +1,27 @@
+.swiper-button-prev, .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5); /* Cor de fundo semitransparente */
+    color: #fff; /* Cor do texto */
+    padding: 5px; /* Ajusta o espaço interno */
+    cursor: pointer;
+    font-size: 12px; /* Ajusta o tamanho do texto */
+    border-radius: 4px; /* Bordas arredondadas, se desejar */
+    width: 30px; /* Ajusta a largura */
+    height: 30px; /* Ajusta a altura */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Posiciona o botão de navegação para a esquerda */
+  .swiper-button-prev {
+    left: 10px;
+  }
+  
+  /* Posiciona o botão de navegação para a direita */
+  .swiper-button-next {
+    right: 10px;
+  }
+  

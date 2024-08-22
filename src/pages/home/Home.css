@@ -1,0 +1,19 @@
+.color-fundo{
+    background:#19191a;
+    position: sticky;
+    height: 60vh;
+}
+
+.color-texts {
+    color: #53c38d;
+}
+
+.fundoHome {
+    background-image: url(../../assets/imagens/navbarImg/banner.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-position:center;
+    background-blend-mode: darken;
+}
