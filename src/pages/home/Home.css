@@ -1,7 +1,6 @@
 .color-fundo{
     background:#19191a;
     position: sticky;
-    height: 60vh;
 }
 
 .color-texts {
@@ -17,3 +16,71 @@
     background-position:center;
     background-blend-mode: darken;
 }
+
+.fundoDesconto {
+    background-image: url(../../assets//imagens/banner3.png);
+    background-repeat: no-repeat;
+    width: 80%;
+    height: 15vh;
+    background-size: contain;
+    background-position:center;
+    background-blend-mode: darken;
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 1024px) {
+    .fundoHome {
+      justify-content: center;
+    }
+  
+    .container {
+      text-align: center;
+    }
+  
+    .ml-96 {
+      margin-left: 0; /* Remove margem à esquerda em telas menores */
+    }
+  
+    .mt-28 {
+      margin-top: 16px; /* Reduzir margem superior em tablets */
+    }
+  
+    .bg-#53c38d {
+      margin-left: 50px;
+      margin-right: 50px; /* Ajustar as margens laterais */
+    }
+  
+    .bg-white {
+      margin-left: 50px;
+      margin-right: 50px; /* Ajustar as margens laterais */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .ml-96 {
+      margin-left: 0; /* Remove margem à esquerda em telas menores */
+    }
+  
+    .mt-28 {
+      margin-top: 12px; /* Ajusta a margem superior em dispositivos móveis */
+    }
+  
+    .bg-#53c38d {
+      margin-left: 20px;
+      margin-right: 20px; /* Margens menores em telas pequenas */
+    }
+  
+    .bg-white {
+      margin-left: 20px;
+      margin-right: 20px; /* Margens menores em telas pequenas */
+    }
+  
+    .text-xl {
+      font-size: 1rem; /* Reduzir o tamanho do texto em telas pequenas */
+    }
+  
+    .py-4 {
+      padding-top: 1rem;
+      padding-bottom: 1rem; /* Ajuste de padding vertical */
+    }
+  }

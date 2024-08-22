@@ -16,7 +16,7 @@ function CardProduto({prod}: CardProdutoProps) {
   let novoValor = precoOriginal - (precoOriginal * desconto);
 
   return (
-
+    
     <div className="flex border-white border-2 flex-col bg-white p-0 shadow-md items-center container mx-10 md:w-80 rounded-lg">
     {/* Primeira div com fundo branco e imagem */}
     <div className="bg-[#19191a] border-white  w-full flex justify-center p-4 rounded-t-lg">
