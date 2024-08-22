@@ -141,7 +141,7 @@ function FormularioProduto() {
     <div className="flex flex-col justify-center items-center min-h-[70vh]">
       <img src={Banner2} alt="Plano de fundo" className="opacity-70 h-screen w-screen object-cover absolute"
       />
-      <div className="container flex flex-col justify-center text-black text-opacity-100 mt-10 items-center rounded-md font-semibold font-">
+      <div className="container flex flex-col justify-center text-white z-10 text-opacity-100 mt-10 items-center rounded-md font-semibold font-">
         <h1 className="text-4xl text-center my-8 ">
           {id !== undefined ? "Editar Produto" : "Cadastrar Produto"}
         </h1>
@@ -233,7 +233,7 @@ function FormularioProduto() {
               onChange={(e) => buscarCategoriaPorId(e.currentTarget.value)}
             >
               <option value="" selected disabled>
-                Selecione um tema
+                Selecione uma categoria
               </option>
               {categorias.map((categoria) => (
                 <>
