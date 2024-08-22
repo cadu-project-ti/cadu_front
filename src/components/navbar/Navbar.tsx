@@ -139,9 +139,9 @@ function Navbar() {
 
           <div className="justify-center mx-4 py-4">
             <ul className="flex space-x-24 text-center color-icones items-end text-2xl">
-              <button type="submit" className="hover:text-white">
+            <Link to="/sobre" className="hover:text-white">
                 <li>Sobre nós</li>
-              </button>
+              </Link>
               <Link to="/doacoes" className="hover:text-white">
                 <li>Doações</li>
               </Link>
