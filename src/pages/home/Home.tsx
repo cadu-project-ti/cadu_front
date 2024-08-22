@@ -25,28 +25,21 @@ function Home() {
           </div>
         </div>
 
-        <div className="color-fundo">
+        <div className="color-fundo p-2">
           <div className="">
             <div className="flex-col gap-4"></div>
           </div>
           <div className="py-4"></div>
 
-          <div className="bg-[#53c38d] hover:text-white ml-[150px] mr-[150px] rounded-t-md text-black text-center text-2xl py-4">
+          <div className="bg-[#19191a] hover:text-white ml-[150px] mr-[150px] rounded-t-md border-t-2 border-l-2 border-r-2 text-[#53c38d] text-center text-2xl py-4">
             <ul className="hover:text-white text-center px-10">
-              Confira abaixo nossos produtos
+              Confira abaixo nossas promoções
             </ul>
           </div>
-          <div className="bg-white ml-[150px] mr-[150px] rounded-b-md shadow-md">
+          <div className=" ml-[150px] mr-[150px] rounded-b-md shadow-md mb-2S">
             <div>
               <ListaProdutos />
             </div>
-          </div>
-        </div>
-        <div className="justify-center">
-          <div className="grid grid-cols-2 mt-4">
-            <div className="col-span-1 fundoDesconto"></div>
-
-            <div className="col-span-1 text-white center fundoDesconto mb-2"></div>
           </div>
         </div>
       </div>
