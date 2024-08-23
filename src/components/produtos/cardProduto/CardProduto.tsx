@@ -1,7 +1,6 @@
 import { useContext } from 'react'
 import Produto from '../../../models/Produto'
 import { CarrinhoContext } from '../../../contexts/CarrinhoContext'
-import { Link } from 'react-router-dom'
 
 interface CardProdutoProps {
     prod: Produto

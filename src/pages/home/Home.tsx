@@ -9,7 +9,7 @@ import ListaProdutos from "../../components/produtos/listaProdutos/ListaProdutos
 function Home() {
   return (
     <>
-      <div>
+      <div className="font-mono">
         <div className="fundoHome flex items-center">
           <div className="container">
             <div className="flex flex-col gap-4 ml-96 mt-28">

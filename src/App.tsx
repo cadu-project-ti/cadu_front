@@ -8,7 +8,6 @@ import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
-import Login from "./pages/login/Login";
 import Cadastro from "./pages/cadastro/Cadastro";
 import Carrinho from "./pages/carrinho/Carrinho";
 import FormularioProduto from "./components/produtos/formularioProduto/FormularioProduto";
