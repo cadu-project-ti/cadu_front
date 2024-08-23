@@ -88,7 +88,7 @@ function Navbar() {
               <Link to="/editarProdutos">
                 <li className="hover:text-white">Editar Produto</li>
               </Link>
-              <Link to="/cadastrarCategoria">
+              <Link to="/paginaCategorias">
                 <li className="hover:text-white">Cadastrar Categoria</li>
               </Link>
             </ul>
