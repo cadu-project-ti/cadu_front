@@ -9,7 +9,7 @@ interface CardProdutoProps {
 
 function CardProduto({prod}: CardProdutoProps) {
 
-  const {adicionarItem} = useContext(CarrinhoContext)
+  useContext(CarrinhoContext)
 
   let precoOriginal = prod.preco;
   let desconto = 0.10;
