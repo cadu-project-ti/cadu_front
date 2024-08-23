@@ -66,7 +66,7 @@ function Navbar() {
     navBarComponent = (
       <div className="font-mono">
         <div className="flex py-4 mx-auto space-x-4 color-navbar items-center justify-between border-b-emerald-500 border-b-2">
-          <Link to="/home">
+          <Link to="/">
               <img
                 src={Logo}
                 alt="Logo da empresa"
