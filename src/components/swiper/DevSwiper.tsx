@@ -114,6 +114,28 @@ const DevSwiper = () => {
                 </p>
               </div>
             </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="flex bg-gray-200 p-10 rounded shadow-md gap-4 items-center flex-col container mx-auto md:w-72 justify-center">
+                <img
+                  src={"https://github.com/Ms-Winny.png"}
+                  alt=""
+                  className="w-24 h-24 rounded-full"
+                />
+                <p>Weida Viana</p>
+                <p className="flex gap-2">
+                  <a
+                    href="https://www.linkedin.com/in/weida-winy/"
+                    target="blank"
+                  >
+                    <FaLinkedin />
+                  </a>
+                  <a href="https://github.com/Ms-Winny" target="blank">
+                    <FaGithub />
+                  </a>
+                </p>
+              </div>
+            </SwiperSlide>
         
         
 
