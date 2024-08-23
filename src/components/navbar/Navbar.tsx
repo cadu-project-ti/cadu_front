@@ -128,13 +128,13 @@ function Navbar() {
       <div className="font-mono">
         <div className="flex py-4 mx-auto space-x-4 color-navbar items-center justify-between border-b-emerald-500 border-b-2">
           <button type="submit">
-            <a href="/home">
+          <Link to="/">
               <img
                 src={Logo}
                 alt="Logo da empresa"
                 className="left-0 md:w-56"
               />
-            </a>
+          </Link>
           </button>
 
           <div className="justify-center mx-4 py-4">
