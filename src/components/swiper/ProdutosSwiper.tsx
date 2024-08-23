@@ -11,7 +11,7 @@ import { CarrinhoContext } from "../../contexts/CarrinhoContext";
 import ListaProdutos from "../produtos/listaProdutos/ListaProdutos";
 
 const ProdutosSwiper = () => {
-  const { adicionarItem } = useContext(CarrinhoContext);
+  useContext(CarrinhoContext);
 
   return (
     <div className="color-fundo py-6 pl-4">

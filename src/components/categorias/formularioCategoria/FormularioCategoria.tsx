@@ -8,7 +8,7 @@ import { toastAlerta } from '../../../util/toastAlert';
 
 
 function FormularioCategoria() {
-  const [categorias, setCategorias] = useState<Categorias[]>([]);
+  const [] = useState<Categorias[]>([]);
   const [categoria, setCategoria] = useState<Categorias>({} as Categorias);
 
   let navigate = useNavigate();

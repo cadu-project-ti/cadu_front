@@ -61,7 +61,7 @@ export function CarrinhoProvider({ children }: CarrinhoProviderProps) {
         toastAlerta("Produto removido", "sucesso");
     }
 
-    function finalizarCompra(soma: number) {
+    function finalizarCompra() {
         setListaCarrinho([]);
         toastAlerta("Compra finalizada com sucesso", "sucesso");
     }

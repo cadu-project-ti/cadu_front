@@ -5,7 +5,6 @@ import { Trash } from "@phosphor-icons/react";
 import Compras from "../../assets/imagens/carrinhoNeon.png";
 
 function Carrinho() {
-  const navigate = useNavigate();
 
   const {
     adicionarItem,

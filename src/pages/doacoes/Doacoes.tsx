@@ -15,7 +15,7 @@ const DonationForm = () => {
   const [marca, setMarca] = useState("");
   const [condicao, setCondicao] = useState("novo");
   const [enviado, setEnviado] = useState(false); // Estado para controlar a simulação de envio
-  const { usuario, handleLogout } = useContext(AuthContext);
+  const { usuario } = useContext(AuthContext);
   const token = usuario.token;
 
   // Função para lidar com a submissão do formulário
