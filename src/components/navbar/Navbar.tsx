@@ -76,7 +76,7 @@ function Navbar() {
 
           <div className="justify-center mx-4 py-4">
             <ul className="flex space-x-24 text-center color-icones items-end text-">
-              <Link to="/sobre">
+              <Link to="/sobre" className="hover:text-white">
                 <li>Sobre nós</li>
               </Link>
               <Link to="/doacoes" className="hover:text-white">

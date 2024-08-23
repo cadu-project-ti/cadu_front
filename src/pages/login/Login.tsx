@@ -1,5 +1,5 @@
 import { ChangeEvent, useContext, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import UsuarioLogin from "../../models/UsuarioLogin";
 
@@ -79,9 +79,9 @@ function Login() {
         <a href="#" className="text-emerald-500">
           Faça seu login ou{" "}
         </a>
-        <a href="/cadastro" className="text-emerald-500 hover:underline">
+        <Link to="/cadastro" className="text-emerald-500 hover:underline">
           cadastre-se
-        </a>
+        </Link>
       </p>
     </form>
   );
