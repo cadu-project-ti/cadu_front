@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import { CarrinhoContext } from "../../contexts/CarrinhoContext";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Trash } from "@phosphor-icons/react";
 import Compras from "../../assets/imagens/carrinhoNeon.png";
 
