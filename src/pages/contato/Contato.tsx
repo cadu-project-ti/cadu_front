@@ -3,14 +3,11 @@ import DevSwiper from "../../components/swiper/DevSwiper";
 function Contato() {
   return (
 
-    <div className="container flex flex-col mx-auto items-center bg-gray-100 ">
-      <div className="text-center py-6 ">
-        <h1 className="text-4xl font-bold">Entre em Contato</h1>
-      </div>
+    <div className="container flex flex-col font-mono mx-auto items-center m- bg-[#19191a] p-7">
 
-      <main className="flex flex-col w-1/2 gap-8 mt-10 p-6 bg-white rounded-lg shadow-lg grid grid-cols-2">
+      <main className="flex-col w-1/2 gap-8 bg-white text-[#] bg-opacity-50 mt-10 p-6 rounded-lg shadow-lg grid grid-cols-2">
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">Com a Empresa</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-center">Com a Empresa</h2>
           <form className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
               <label htmlFor="nomeEmpresa" className="block text-sm font-medium text-gray-700">Seu Nome</label>
@@ -57,7 +54,7 @@ function Contato() {
             </div>
             <button
               type="submit"
-              className="rounded bg-indigo-400 hover:bg-indigo-800 text-white font-bold w-1/2 mx-auto block py-2"
+              className="rounded bg-[#53c38d] text-white hover:bg-white  hover:text-[#53c38d] font-semibold w-1/2 mx-auto block py-2"
             >
               Enviar Mensagem
             </button>
@@ -65,7 +62,7 @@ function Contato() {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold mb-4">Com os Desenvolvedores</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-center">Com os Desenvolvedores</h2>
           <form className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
               <label htmlFor="nomeDev" className="block text-sm font-medium text-gray-700">Seu Nome</label>
@@ -118,7 +115,7 @@ function Contato() {
             </div>
             <button
               type="submit"
-              className="rounded bg-green-600 hover:bg-green-800 text-white font-bold w-1/2 mx-auto block py-2"
+              className="rounded bg-[#53c38d] text-white  hover:bg-white  hover:text-[#53c38d] font-semibold w-1/2 mx-auto block py-2"
             >
               Enviar Mensagem
             </button>
