@@ -107,7 +107,7 @@ function FormularioCategoria() {
 
       <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovaCategoria}>
         <div className="flex flex-col gap-2">
-          <label htmlFor="descricao">Descrição da Categoria</label>
+          <label htmlFor="descricao"></label>
           <input
             type="text"
             placeholder="Descrição"
