@@ -66,13 +66,13 @@ function Navbar() {
     navBarComponent = (
       <div className="font-mono">
         <div className="flex py-4 mx-auto space-x-4 color-navbar items-center justify-between border-b-emerald-500 border-b-2">
-          <button type="submit" onClick={() => navigate('/')}>
+          <Link to="/home">
               <img
                 src={Logo}
                 alt="Logo da empresa"
                 className="left-0 md:w-56"
               />
-          </button>
+          </Link>
 
           <div className="justify-center mx-4 py-4">
             <ul className="flex space-x-24 text-center color-icones items-end text-">
