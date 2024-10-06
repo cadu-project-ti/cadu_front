@@ -109,11 +109,11 @@ function Navbar() {
                 <img
                   src={Carrinho}
                   alt="Carrinho"
-                  className="py-4 items-center w-8 lg:w-12"
+                  className="py-4 items-center w-8 lg:w-7"
                 />
               </Link>
               <button onClick={logout} type="button" className="px-0 pr-2">
-                <img src={Logout} alt="Logout" className="w-8 lg:w-12" />
+                <img src={Logout} alt="Logout" className="w-8 lg:w-7" />
               </button>
             </div>
 
