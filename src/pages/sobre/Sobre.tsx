@@ -8,7 +8,14 @@ import CardValores from "../../components/valores/CardValores";
 import criancas from "../../assets/imagens/aulacrianca.png";
 import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {  Navigation,  Pagination,  Scrollbar,  A11y,  Autoplay,} from "swiper/modules";
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+} from "swiper/modules";
+import "../../components/produtos/listaProdutos/ListaProdutos.css";
 
 function Sobre() {
   const navigate = useNavigate();
@@ -43,18 +50,17 @@ function Sobre() {
       image: imageCard4,
     },
   ];
-
   return (
     <>
       <header className="bg-[#19191a] shadow-lg">
-        <div className="flex items-center justify-center gap-24 p-4">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 p-4">
           <h1 className="text-4xl font-semibold text-[#53c38d] text-center">
             Compre <br />
             <span className="text-5xl font-bold text-white">Ajude</span>
           </h1>
           <div className="relative w-24 h-24">
             <img
-              className="w- h-28 object-cover rounded-full border-[#53c38d]"
+              className="w-full h-full object-cover rounded-full border-[#53c38d] border-2"
               src={logotipo}
               alt="Logotipo"
             />
@@ -68,13 +74,13 @@ function Sobre() {
 
       <main className="bg-[#19191a]">
         <div className="flex justify-center font-mono">
-          <div className="flex flex-col md:flex-row items-center mt-16 mb-16 rounded-3xl w-[90%] md:w-[80%] p-8 ">
+          <div className="flex flex-col md:flex-row items-center mt-16 mb-16 rounded-3xl w-[90%] md:w-[80%] p-8">
             <div className="flex flex-col text-lg md:text-xl p-4 gap-4 md:w-1/2">
               <hr className="flex border-[#53c38d] items-center text-center w-full mx-auto " />
-              <h2 className="text-2xl text-black font-bold bg-emerald-300 p- rounded-md text-center ">
+              <h2 className="text-2xl text-black font-bold bg-emerald-300 p-2 rounded-md text-center">
                 Projeto Social CADU
               </h2>
-              <p className="text-white bg-[#19191a]  leading-relaxed overflow-auto">
+              <p className="text-white leading-relaxed overflow-auto">
                 Em um mundo onde a tecnologia é vital, muitas comunidades
                 carentes ainda lutam para acessar computadores. O PROJETO CADU
                 surgiu para mudar essa realidade.
@@ -110,14 +116,14 @@ function Sobre() {
             </div>
 
             {/* Container para a imagem */}
-            <div className="flex-col-2 items-center mb-4 md:w-[50%]">
+            <div className="flex flex-col items-center mb-4 md:w-1/2">
               <img
-                className="h-auto object-cover rounded-xl p-2 "
+                className="h-auto object-cover rounded-xl p-2"
                 src={laboratorio}
                 alt="Sala de tecnologia"
               />
               <img
-                className="h-auto object-cover rounded-xl p-2 "
+                className="h-auto object-cover rounded-xl p-2"
                 src={criancas}
                 alt="Crianças estudando"
               />
@@ -125,6 +131,7 @@ function Sobre() {
           </div>
         </div>
       </main>
+
       <hr className="flex border-[#53c38d] items-center text-center w-80 mx-auto mb-4" />
       <div className="text-white font-bold text-center mb-4">
         SAIBA MAIS SOBRE NÓS
@@ -133,9 +140,13 @@ function Sobre() {
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           slidesPerView={1}
-          autoplay={{ delay: 20000 }} // 20000 ms = 20 segundos
-          loop={true} // Ativa o loop dos slides
-          className="w-full max-w-4xl mx-auto" // Ajusta a largura máxima do Swiper
+          navigation={{
+            prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next",
+          }}
+          autoplay={{ delay: 5000 }} // 20000 ms = 20 segundos
+          loop={true}
+          className="w-full max-w-4xl mx-auto"
         >
           {cardsData.map((card, index) => (
             <SwiperSlide
@@ -149,9 +160,10 @@ function Sobre() {
               />
             </SwiperSlide>
           ))}
+          <div className="swiper-button-prev py-10"></div>
+          <div className="swiper-button-next"></div>
         </Swiper>
       </div>
-      
     </>
   );
 }

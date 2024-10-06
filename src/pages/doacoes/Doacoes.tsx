@@ -55,10 +55,10 @@ const DonationForm = () => {
   }, [token]);
 
   return (
-    <div className="flex justify-center items-center min-h-[70vh]"> 
-      <img src={Banner2} alt="" className="opacity-70 h-screen w-screen object-cover absolute" />
-      <div className="absolute bg-black bg-opacity-80 text-white font-semibold justify-center items-center text-center py-5 px-6 rounded-md">
-        {enviado ? ( // Mostrar mensagem de sucesso se o formulário for enviado
+    <div className="flex justify-center items-center min-h-[85vh] relative"> 
+      <img src={Banner2} alt="" className="opacity-70 h-full w-full object-cover absolute" />
+      <div className="bg-black bg-opacity-80 text-white font-semibold justify-center items-center text-center py-5 px-6 rounded-md max-w-md w-full z-10">
+        {enviado ? (
           <p className="text-[#53c38d]">Doação enviada com sucesso!</p>
         ) : (
           <form onSubmit={handleSubmit}>
@@ -69,7 +69,7 @@ const DonationForm = () => {
                 value={nomeProduto}
                 onChange={(e) => setNomeProduto(e.target.value)}
                 required
-                className="border border-gray-300 p-2 rounded w-full text-[#53c38d]"
+                className="border border-gray-300 p-2 rounded w-full text-[#53c38d] text-base sm:text-lg"
               />
             </div>
 
@@ -80,7 +80,7 @@ const DonationForm = () => {
                 value={anoDeUso}
                 onChange={(e) => setAnoDeUso(e.target.value)}
                 required
-                className="border border-gray-300 p-2 rounded w-full text-[#53c38d]"
+                className="border border-gray-300 p-2 rounded w-full text-[#53c38d] text-base sm:text-lg"
               />
             </div>
 
@@ -91,7 +91,7 @@ const DonationForm = () => {
                 value={marca}
                 onChange={(e) => setMarca(e.target.value)}
                 required
-                className="border border-gray-300 p-2 rounded w-full text-[#53c38d]"
+                className="border border-gray-300 p-2 rounded w-full text-[#53c38d] text-base sm:text-lg"
               />
             </div>
 
@@ -101,7 +101,7 @@ const DonationForm = () => {
                 value={condicao}
                 onChange={(e) => setCondicao(e.target.value)}
                 required
-                className="border border-gray-300 p-2 rounded w-full text-[#53c38d]"
+                className="border border-gray-300 p-2 rounded w-full text-[#53c38d] text-base sm:text-lg"
               >
                 <option value="novo">Novo</option>
                 <option value="usado">Usado</option>
@@ -111,7 +111,7 @@ const DonationForm = () => {
 
             <button
               type="submit"
-              className="bg-[#53c38d] hover:text-[#53c38d] hover:bg-white text-white py-2 px-4 rounded">
+              className="bg-[#53c38d] hover:text-[#53c38d] hover:bg-white text-white py-2 px-4 rounded text-base sm:text-lg">
               Enviar Doação
             </button> 
           </form>
@@ -120,5 +120,4 @@ const DonationForm = () => {
     </div>
   );
 };
-
 export default DonationForm;

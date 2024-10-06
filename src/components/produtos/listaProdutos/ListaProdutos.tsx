@@ -43,7 +43,7 @@ function ListaProdutos() {
             slidesPerView={4} // Valor padrão para telas grandes
             breakpoints={{
               // Definindo slides diferentes para diferentes tamanhos de tela
-              400: {
+              50: {
                 slidesPerView: 2, // 1 slide para telas pequenas
                 spaceBetween: 20,
               },
