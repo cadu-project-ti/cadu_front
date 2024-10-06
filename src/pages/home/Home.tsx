@@ -19,10 +19,12 @@ function Home() {
               <div className="flex-col gap-4"></div>
             </div>
 
-            <div className="bg-[#19191a] hover:text-white sm:ml-4 sm:mr-4 md:ml-[50px] md:mr-[50px] lg:ml-[150px] lg:mr-[150px] rounded-t-md border-t-2 border-l-2 border-r-2 text-[#53c38d] text-center text-2xl py-4">
-              <ul className="hover:text-white text-center px-4 md:px-6 lg:px-10">
+            <div className="bg-[#19191a] produtosRelacionados hover:text-white sm:ml-4 sm:mr-4 md:ml-[50px] md:mr-[50px] lg:ml-[150px] lg:mr-[150px] text-[#53c38d] text-center text-2xl py-4">
+              <div className="linha"></div>
+              <div className="text-center text-base md:text-2xl lg:text-xl hover:text-white px-4 md:px-6 lg:px-10">
                 Confira abaixo nossas promoções
-              </ul>
+              </div>
+              <div className="linha"></div>
             </div>
             <div className="sm:ml-4 sm:mr-4 md:ml-[50px] md:mr-[50px] lg:ml-[150px] lg:mr-[150px] shadow-md mb-2">
               <div>

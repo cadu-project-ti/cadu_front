@@ -27,6 +27,19 @@
     background-blend-mode: darken;
 }
 
+.linha {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #dedede;
+}
+
+.produtosRelacionados {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
 /* Ajustes de responsividade */
 @media (max-width: 1024px) {
     .fundoHome {

@@ -36,11 +36,11 @@ function ListaProdutos() {
   return (
     <>
       <div>
-        <div className="justify-center border-l-2 border-r-2 bg-[#19191a] items-center border-b-2 rounded-b-md">
+        <div className="justify-center bg-[#19191a] items-center">
           <Swiper className="px-4"
             modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
             spaceBetween={10} // Espaço entre os slides
-            slidesPerView={4} // Valor padrão para telas grandes
+            slidesPerView={3} // Valor padrão para telas grandes
             breakpoints={{
               // Definindo slides diferentes para diferentes tamanhos de tela
               50: {
@@ -60,7 +60,7 @@ function ListaProdutos() {
                 spaceBetween: 70,
               },
               1280: {
-                slidesPerView: 4, // 4 slides para telas grandes
+                slidesPerView: 3, // 4 slides para telas grandes
                 spaceBetween: 10,
               },
             }}
@@ -75,7 +75,7 @@ function ListaProdutos() {
           >
             {produtos &&
               produtos.map((item) => (
-                <SwiperSlide className="mb-4 mt-4" key={item.id}>
+                <SwiperSlide key={item.id}>
                   <CardProduto prod={item} />
                 </SwiperSlide>
               ))}

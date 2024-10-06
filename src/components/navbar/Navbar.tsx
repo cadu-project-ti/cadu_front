@@ -192,7 +192,7 @@ function Navbar() {
             </div>
 
             {isDropdownVisible && (
-              <div className="dropdown login-dropdown absolute top-20 right-4 bg-gray-900 text-white p-6 rounded-lg shadow-lg z-10">
+              <div className="dropdown login-dropdown mt-5 z-10 absolute top-20 right-4 bg-gray-900 text-white p-6 rounded-lg shadow-lg z-10">
                 <Login />
               </div>
             )}

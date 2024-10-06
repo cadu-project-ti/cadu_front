@@ -43,39 +43,43 @@ function Login() {
   }
 
   return (
-    <form onSubmit={login}>
-      <label htmlFor="usuario">Usuário</label>
+    <form onSubmit={login} className="max-w-md bg-gray-900 rounded-lg shadow-lg">
+      <label htmlFor="usuario" className="block text-sm font-medium text-white">
+        Usuário
+      </label>
       <input
         type="text"
         id="usuario"
         name="usuario"
         placeholder="Usuário"
-        className="w-full bg-gray-800 text-white p-2 rounded-2xl mt-1 mb-4"
+        className="w-full bg-gray-800 text-white p-2 rounded-2xl mt-1 mb-4 focus:outline-none focus:ring-2 focus:ring-emerald-500"
         value={usuarioLogin.usuario || ""}
         onChange={atualizarEstado}
         required
       />
-
-      <label htmlFor="password">Senha</label>
+  
+      <label htmlFor="password" className="block text-sm font-medium text-white">
+        Senha
+      </label>
       <input
         type="password"
         id="password"
         placeholder="Senha"
         name="senha"  /* Certifique-se de usar o nome correto do campo */
-        className="w-full bg-gray-800 text-white p-2 rounded-2xl mt-1 mb-4"
+        className="w-full bg-gray-800 text-white p-2 rounded-2xl mt-1 mb-4 focus:outline-none focus:ring-2 focus:ring-emerald-500"
         value={usuarioLogin.senha || ""}
         onChange={atualizarEstado}
         required
       />
-
+  
       <button
         type="submit"
-        className="w-full bg-emerald-500 text-white p-2 rounded mt-2 hover:bg-emerald-700"
+        className="w-full bg-emerald-500 text-white p-2 rounded mt-2 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500"
       >
         {isLoading ? "Entrando..." : "Entrar"}
       </button>
-
-      <p className="text-center mt-4">
+  
+      <p className="text-center mt-4 text-sm">
         <a href="#" className="text-emerald-500">
           Faça seu login ou{" "}
         </a>
