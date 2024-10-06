@@ -21,7 +21,7 @@ function Home() {
 
             <div className="bg-[#19191a] produtosRelacionados hover:text-white sm:ml-4 sm:mr-4 md:ml-[50px] md:mr-[50px] lg:ml-[150px] lg:mr-[150px] text-[#53c38d] text-center text-2xl py-4">
               <div className="linha"></div>
-              <div className="text-center text-base md:text-2xl lg:text-xl hover:text-white px-4 md:px-6 lg:px-10">
+              <div className="text-center text-base md:text-xs lg:text-xl hover:text-white px-4 md:px-6 lg:px-10">
                 Confira abaixo nossas promoções
               </div>
               <div className="linha"></div>
