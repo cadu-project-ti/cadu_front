@@ -73,4 +73,3 @@ function ListaProdutos() {
 }
 
 export default ListaProdutos;
-2;

@@ -23,7 +23,7 @@ function Carrinho() {
 
   return (
     <>
-      <div className="font-mono mx-auto grid grid-cols-2 items-center justify-center rounded-2xl ">
+      <div className="font-mono mx-auto grid grid-cols-2 items-center justify-center rounded-2xl">
         <div className="flex justify-center items-center">
           <img
             src={Compras}
