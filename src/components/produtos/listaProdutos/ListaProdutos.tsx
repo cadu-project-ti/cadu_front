@@ -36,8 +36,8 @@ function ListaProdutos() {
   return (
     <>
       <div>
-        <div className="justify-center bg-[#19191a] items-center">
-          <Swiper className="px-4"
+        <div className="justify-center bg-[#19191a] items-center ">
+          <Swiper className=""
             modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
             spaceBetween={10} // Espaço entre os slides
             slidesPerView={3} // Valor padrão para telas grandes
@@ -79,9 +79,9 @@ function ListaProdutos() {
                   <CardProduto prod={item} />
                 </SwiperSlide>
               ))}
-            <div className="swiper-button-prev"></div>
-            <div className="swiper-button-next"></div>
           </Swiper>
+          <div className="swiper-button-prev"></div>
+          <div className="swiper-button-next"></div>
         </div>
       </div>
     </>

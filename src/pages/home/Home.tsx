@@ -26,7 +26,7 @@ function Home() {
               </div>
               <div className="linha"></div>
             </div>
-            <div className="sm:ml-4 sm:mr-4 md:ml-[50px] md:mr-[50px] lg:ml-[150px] lg:mr-[150px] shadow-md mb-2">
+            <div className="sm:ml-4 sm:mr-4 md:ml-[50px] md:mr-[50px] lg:ml-[150px] lg:mr-[150px] mb-2">
               <div>
                 <ListaProdutos />
               </div>
