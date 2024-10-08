@@ -88,8 +88,8 @@ function Sobre() {
                 <br />
                 Comprometidos em transformar vidas por meio da tecnologia e
                 alinhados com o Objetivo da ONU 9, recolhemos peças usadas e as
-                recondicionamos para montar computadores e os usamos para montar
-                centros tecnológicos em comunidades.
+                recondicionamos para criar computadores, que são utilizados para
+                instalar centros tecnológicos em comunidades.
                 <br />
                 <br />
                 Além disso, uma porcentagem de cada venda também é revertida
