@@ -71,7 +71,7 @@ function ListaParceiros() {
 
         <SwiperSlide>
           <div className="flex p-10 rounded fonteProjeto gap-4 text-purple-900 items-center flex-col container mx-auto">
-            <a href="https://www.benq.com/en.html" target="blank">
+            <a href="https://www.havit.hk/" target="blank">
               <img
                 src="https://i.ibb.co/ZBMKWdB/havit.png"
                 alt=""
